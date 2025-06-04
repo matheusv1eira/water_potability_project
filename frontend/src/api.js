@@ -1,20 +1,24 @@
-const API_URL = 'http://localhost:5000';
-
-export const predictWaterPotability = async (features) => {
-  const response = await.fetch(${API_URL}/predict, {
+export async function predictWaterPotability(features) {
+  const response = await fetch('http://localhost:5000/predict', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ features })
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(features),
   });
-  
-  if (!response.ok) {
-    throw new Error('Erro na previsão');
-  }
-  
-  return await response.json();
-};
 
-export const checkApiHealth = async () => {
-  const response = await fetch(${API_URL}/health);
-  return await response.json();
-};
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(errorData.error || 'Erro na requisição');
+  }
+
+  return response.json();
+}
+
+export async function checkApiHealth() {
+  const response = await fetch('http://localhost:5000/health');
+  if (!response.ok) {
+    throw new Error('API offline');
+  }
+  return response.json();
+}

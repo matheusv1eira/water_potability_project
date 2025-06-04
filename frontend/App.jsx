@@ -20,7 +20,7 @@ function App() {
         setError('API não disponível');
       }
     };
-    
+
     checkApi();
   }, []);
 
@@ -28,7 +28,7 @@ function App() {
     setLoading(true);
     setError('');
     setResult(null);
-    
+
     try {
       const prediction = await predictWaterPotability(features);
       setResult(prediction);
@@ -39,27 +39,20 @@ function App() {
     }
   };
 
-  // Definindo a classe CSS dinamicamente com base no status da API
-  const apiStatusClass = apiStatus === 'online' 
-    ? 'api-status online' 
-    : apiStatus === 'offline' 
-      ? 'api-status offline' 
-      : 'api-status checking';
-
   return (
     <div className="App">
       <header>
         <h1>Analisador de Potabilidade da Água</h1>
-        <div className={apiStatusClass}>
-          API: {apiStatus === 'online' ? '✅ Online' : apiStatus === 'offline' ? '❌ Offline' : '⌛ Verificando...'}
+        <div className={pi-status }>
+          API: {apiStatus === 'online' ? '✅ Online' : '❌ Offline'}
         </div>
       </header>
-      
+
       <main>
         <WaterForm onSubmit={handlePredict} loading={loading} />
         <ResultDisplay result={result} error={error} />
       </main>
-      
+
       <footer>
         <p>Sistema de Análise de Água com IA</p>
       </footer>

@@ -12,21 +12,19 @@ predictor = WaterPotabilityPredictor()
 def predict():
     try:
         data = request.get_json()
-        features = data.get('features')
-        
-        if not features or len(features) != 9:
-            return jsonify({
-                'error': 'São necessários 9 parâmetros',
-                'parametros': [
-                    'pH', 'Dureza', 'Sólidos', 'Cloraminas',
-                    'Sulfato', 'Condutividade', 'Carbono Orgânico',
-                    'Trihalometanos', 'Turbidez'
-                ]
-            }), 400
-        
-        result = predictor.predict(features)
+        features = data.get("features", data)
+
+        expected_order = [
+            'pH', 'Dureza', 'Sólidos', 'Cloraminas',
+            'Sulfato', 'Condutividade', 'Carbono Orgânico',
+            'Trihalometanos', 'Turbidez'
+        ]
+
+        input_values = [float(features[param]) for param in expected_order]
+
+        result = predictor.predict(input_values)
         return jsonify(result)
-        
+
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
