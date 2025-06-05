@@ -32,7 +32,7 @@ function App() {
     try {
       const prediction = await predictWaterPotability(features);
       setResult(prediction);
-    } catch (err) {
+    } catch {
       setError('Erro na análise. Verifique os dados e tente novamente.');
     } finally {
       setLoading(false);
@@ -40,21 +40,43 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header>
-        <h1>Analisador de Potabilidade da Água</h1>
-        <div className={pi-status }>
-          API: {apiStatus === 'online' ? '✅ Online' : '❌ Offline'}
+    <div className="app-container">
+      <header className="app-header">
+        <h1>💧 Analisador de Qualidade da Água com IA</h1>
+        <div className={`api-status ${apiStatus}`}>
+          {apiStatus === 'online' && (
+            <>
+              <span className="status-icon online">✅</span> API Online
+            </>
+          )}
+          {apiStatus === 'offline' && (
+            <>
+              <span className="status-icon offline">❌</span> API Offline
+            </>
+          )}
+          {apiStatus === 'checking' && (
+            <>
+              <span className="status-icon checking">⌛</span> Verificando API...
+            </>
+          )}
         </div>
       </header>
 
-      <main>
-        <WaterForm onSubmit={handlePredict} loading={loading} />
-        <ResultDisplay result={result} error={error} />
+      <main className="app-main">
+        <section className="form-section">
+          <WaterForm onSubmit={handlePredict} loading={loading} />
+        </section>
+        <section className="result-section">
+          {loading ? (
+            <div className="loading-spinner" aria-label="Carregando"></div>
+          ) : (
+            <ResultDisplay result={result} error={error} />
+          )}
+        </section>
       </main>
 
-      <footer>
-        <p>Sistema de Análise de Água com IA</p>
+      <footer className="app-footer">
+        <p>Desenvolvido com ♥ para o projeto de IA</p>
       </footer>
     </div>
   );

@@ -12,26 +12,36 @@ predictor = WaterPotabilityPredictor()
 def predict():
     try:
         data = request.get_json()
+        print("Recebido no backend:", data) 
+
         features = data.get("features", data)
+        nome_traduzido = {
+            'pH': 'ph',
+            'Dureza': 'Hardness',
+            'Sólidos': 'Solids',
+            'Cloraminas': 'Chloramines',
+            'Sulfato': 'Sulfate',
+            'Condutividade': 'Conductivity',
+            'Carbono Orgânico': 'Organic_carbon',
+            'Trihalometanos': 'Trihalomethanes',
+            'Turbidez': 'Turbidity'
+        }
 
-        expected_order = [
-            'pH', 'Dureza', 'Sólidos', 'Cloraminas',
-            'Sulfato', 'Condutividade', 'Carbono Orgânico',
-            'Trihalometanos', 'Turbidez'
-        ]
+        expected_order = list(nome_traduzido.keys())
 
-        input_values = [float(features[param]) for param in expected_order]
+        translated_features = []
+        for pt in expected_order:
+            val = features.get(pt)
+            if val is None or val == '':
+                raise ValueError(f"Parâmetro faltando ou inválido: {pt}")
+            translated_features.append(float(val))
 
-        result = predictor.predict(input_values)
+        result = predictor.predict(translated_features)
         return jsonify(result)
 
     except Exception as e:
+        print("Erro na predição:", e)
         return jsonify({'error': str(e)}), 500
 
-@app.route('/health', methods=['GET'])
-def health_check():
-    return jsonify({'status': 'online', 'model': 'RandomForest'})
-
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(debug=True)
