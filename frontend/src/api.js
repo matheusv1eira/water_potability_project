@@ -1,24 +1,30 @@
-export async function predictWaterPotability(features) {
+export async function predictWaterPotability(formData) {
+  const bodyData = {
+    features: {
+      "pH": Number(formData.ph),
+      "Dureza": Number(formData.hardness),
+      "Sólidos": Number(formData.solids),
+      "Cloraminas": Number(formData.chloramines),
+      "Sulfato": Number(formData.sulfate),
+      "Condutividade": Number(formData.conductivity),
+      "Carbono Orgânico": Number(formData.organic_carbon),
+      "Trihalometanos": Number(formData.trihalomethanes),
+      "Turbidez": Number(formData.turbidity),
+    }
+  };
+
   const response = await fetch('http://localhost:5000/predict', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
     },
-    body: JSON.stringify(features),
+    body: JSON.stringify(bodyData)
   });
 
   if (!response.ok) {
-    const errorData = await response.json();
-    throw new Error(errorData.error || 'Erro na requisição');
+    throw new Error('Erro ao conectar ao servidor');
   }
 
-  return response.json();
-}
-
-export async function checkApiHealth() {
-  const response = await fetch('http://localhost:5000/health');
-  if (!response.ok) {
-    throw new Error('API offline');
-  }
-  return response.json();
+  const data = await response.json();
+  return data; 
 }
