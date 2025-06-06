@@ -1,10 +1,19 @@
 import joblib
 import numpy as np
 import pandas as pd
+import os
 
 class WaterPotabilityPredictor:
-    def __init__(self, model_path='../model/water_potability_model.pkl',
-                 scaler_path='../model/scaler.pkl'):
+    def __init__(self,
+                 model_path=None,
+                 scaler_path=None):
+        
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        if model_path is None:
+            model_path = os.path.abspath(os.path.join(base_dir, '../model/water_potability_model.pkl'))
+        if scaler_path is None:
+            scaler_path = os.path.abspath(os.path.join(base_dir, '../model/scaler.pkl'))
+
         self.model = joblib.load(model_path)
         self.scaler = joblib.load(scaler_path)
         self.columns = [
@@ -25,3 +34,5 @@ class WaterPotabilityPredictor:
             'probability': float(probability),
             'message': 'Potável' if prediction == 1 else 'Não Potável'
         }
+
+
