@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Sistema avançado de previsão de potabilidade da água utilizando Inteligência Artificial" />
-  <meta name="keywords" content="água potável, IA, qualidade da água, machine learning, análise água" />
-  <title>AquaSafe | Previsão Inteligente de Potabilidade da Água</title>
+  <meta name="description" content="Advanced water potability prediction using Artificial Intelligence" />
+  <meta name="keywords" content="drinking water, AI, water quality, machine learning, water analysis" />
+  <title>AquaSafe | AI Water Potability Prediction</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -778,11 +778,11 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#home">Início</a></li>
-          <li><a href="#predict">Previsão</a></li>
-          <li><a href="#features">Recursos</a></li>
-          <li><a href="#chart">Análises</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#predict">Analysis</a></li>
+          <li><a href="#features">Technology</a></li>
+          <li><a href="#chart">Insights</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -791,9 +791,9 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="container hero-content">
-      <h1 class="animate">Tecnologia Avançada para Análise de Água</h1>
-      <p class="animate delay-1">Nosso sistema de IA analisa parâmetros físico-químicos em tempo real para determinar a potabilidade da água com 92% de precisão</p>
-      <a href="#predict" class="cta-button animate delay-2">Testar Agora <i class="fas fa-arrow-right"></i></a>
+      <h1 class="animate">Advanced Technology for Water Quality Analysis</h1>
+      <p class="animate delay-1">Our AI system analyzes physicochemical parameters in real-time to determine water potability with 92% accuracy</p>
+      <a href="#predict" class="cta-button animate delay-2">Test Now <i class="fas fa-arrow-right"></i></a>
     </div>
   </section>
 
@@ -801,65 +801,65 @@
   <section class="prediction-section" id="predict">
     <div class="container">
       <div class="section-header">
-        <h2 class="animate">Verifique a Potabilidade</h2>
-        <p class="animate delay-1">Insira os parâmetros da água para uma análise instantânea</p>
+        <h2 class="animate">Check Water Potability</h2>
+        <p class="animate delay-1">Enter water parameters for instant analysis</p>
       </div>
       
       <div class="prediction-container">
         <div class="form-container animate">
-          <h3>Parâmetros de Entrada</h3>
+          <h3>Input Parameters</h3>
           <form id="water-form">
             <div class="input-group">
-              <label for="ph"><i class="fas fa-vial"></i> Nível de pH</label>
+              <label for="ph"><i class="fas fa-vial"></i> pH Level</label>
               <input type="number" id="ph" min="0" max="14" step="0.1" value="" required>
               <div class="range-info">
-                <span>Ácido (0.0)</span>
-                <span>Neutro (7.0)</span>
-                <span>Alcalino (14.0)</span>
+                <span>Acidic (0.0)</span>
+                <span>Neutral (7.0)</span>
+                <span>Alkaline (14.0)</span>
               </div>
             </div>
             
             <div class="input-group">
-              <label for="hardness"><i class="fas fa-gem"></i> Dureza (mg/L)</label>
+              <label for="hardness"><i class="fas fa-gem"></i> Hardness (mg/L)</label>
               <input type="number" id="hardness" min="0" step="1" value="" required>
             </div>
             
             <div class="input-group">
-              <label for="solids"><i class="fas fa-cubes"></i> Sólidos Dissolvidos (mg/L)</label>
+              <label for="solids"><i class="fas fa-cubes"></i> Total Dissolved Solids (mg/L)</label>
               <input type="number" id="solids" min="0" step="1" value="" required>
             </div>
             
             <div class="input-group">
-              <label for="chloramines"><i class="fas fa-flask"></i> Cloraminas (mg/L)</label>
+              <label for="chloramines"><i class="fas fa-flask"></i> Chloramines (mg/L)</label>
               <input type="number" id="chloramines" min="0" step="0.1" value="" required>
             </div>
             
             <div class="input-group">
-              <label for="sulfate"><i class="fas fa-atom"></i> Sulfato (mg/L)</label>
+              <label for="sulfate"><i class="fas fa-atom"></i> Sulfate (mg/L)</label>
               <input type="number" id="sulfate" min="0" step="1" value="" required>
             </div>
             
             <div class="input-group">
-              <label for="conductivity"><i class="fas fa-bolt"></i> Condutividade (μS/cm)</label>
+              <label for="conductivity"><i class="fas fa-bolt"></i> Conductivity (μS/cm)</label>
               <input type="number" id="conductivity" min="0" step="1" value="" required>
             </div>
             
             <div class="input-group">
-              <label for="organic_carbon"><i class="fas fa-leaf"></i> Carbono Orgânico (mg/L)</label>
+              <label for="organic_carbon"><i class="fas fa-leaf"></i> Organic Carbon (mg/L)</label>
               <input type="number" id="organic_carbon" min="0" step="0.1" value="" required>
             </div>
             
             <div class="input-group">
-              <label for="trihalomethanes"><i class="fas fa-radiation"></i> Trihalometanos (μg/L)</label>
+              <label for="trihalomethanes"><i class="fas fa-radiation"></i> Trihalomethanes (μg/L)</label>
               <input type="number" id="trihalomethanes" min="0" step="1" value="" required>
             </div>
             
             <div class="input-group">
-              <label for="turbidity"><i class="fas fa-water"></i> Turbidez (NTU)</label>
+              <label for="turbidity"><i class="fas fa-water"></i> Turbidity (NTU)</label>
               <input type="number" id="turbidity" min="0" step="0.1" value="" required>
             </div>
             
-            <button type="submit" class="submit-btn">Analisar Potabilidade <i class="fas fa-flask"></i></button>
+            <button type="submit" class="submit-btn">Analyze Potability <i class="fas fa-flask"></i></button>
           </form>
         </div>
         
@@ -868,12 +868,12 @@
             <div class="result-icon">
               <i class="fas fa-question-circle"></i>
             </div>
-            <h3 class="result-title">Aguardando análise</h3>
-            <p class="result-description">Insira os parâmetros da água para verificar a potabilidade</p>
+            <h3 class="result-title">Awaiting Analysis</h3>
+            <p class="result-description">Enter water parameters to check potability</p>
             <div class="confidence-meter">
               <div class="confidence-level" id="confidence-level" style="width: 0%"></div>
             </div>
-            <p>Confiança: <span id="confidence-value">0%</span></p>
+            <p>Confidence: <span id="confidence-value">0%</span></p>
             <div class="chart-wrapper" style="width: 100%; max-width: 300px; margin-top: 2rem; display: none;" id="quality-chart">
               <canvas id="water-chart"></canvas>
             </div>
@@ -887,8 +887,8 @@
   <section class="features" id="features">
     <div class="container features-content">
       <div class="section-header">
-        <h2 class="animate">Tecnologia de Ponta</h2>
-        <p class="animate delay-1">Soluções avançadas para análise precisa da qualidade da água</p>
+        <h2 class="animate">Advanced Technology</h2>
+        <p class="animate delay-1">Cutting-edge solutions for precise water quality analysis</p>
       </div>
       
       <div class="features-grid">
@@ -896,48 +896,48 @@
           <div class="feature-icon">
             <i class="fas fa-brain"></i>
           </div>
-          <h3>Algoritmo de IA Avançado</h3>
-          <p>Random Forest otimizado com GridSearchCV para máxima precisão</p>
+          <h3>Advanced AI Algorithm</h3>
+          <p>Random Forest optimized with GridSearchCV for maximum precision</p>
         </div>
         
         <div class="feature-card animate delay-1">
           <div class="feature-icon">
             <i class="fas fa-database"></i>
           </div>
-          <h3>Dados Reais e Atualizados</h3>
-          <p>Modelo treinado com mais de 3.000 amostras de diversas fontes</p>
+          <h3>Real & Updated Data</h3>
+          <p>Model trained with over 3,000 samples from diverse sources</p>
         </div>
         
         <div class="feature-card animate delay-2">
           <div class="feature-icon">
             <i class="fas fa-bolt"></i>
           </div>
-          <h3>Processamento em Tempo Real</h3>
-          <p>Análise instantânea com resultados em menos de 2 segundos</p>
+          <h3>Real-time Processing</h3>
+          <p>Instant analysis with results in under 2 seconds</p>
         </div>
         
         <div class="feature-card animate delay-3">
           <div class="feature-icon">
             <i class="fas fa-shield-alt"></i>
           </div>
-          <h3>Precisão Comprovada</h3>
-          <p>92% de acurácia em testes com dados desconhecidos</p>
+          <h3>Proven Accuracy</h3>
+          <p>92% accuracy in tests with unknown data</p>
         </div>
         
         <div class="feature-card animate">
           <div class="feature-icon">
             <i class="fas fa-mobile-alt"></i>
           </div>
-          <h3>Design Responsivo</h3>
-          <p>Experiência perfeita em qualquer dispositivo</p>
+          <h3>Responsive Design</h3>
+          <p>Perfect experience on any device</p>
         </div>
         
         <div class="feature-card animate delay-1">
           <div class="feature-icon">
             <i class="fas fa-sync-alt"></i>
           </div>
-          <h3>Atualizações Contínuas</h3>
-          <p>Modelo aprimorado constantemente com novos dados</p>
+          <h3>Continuous Updates</h3>
+          <p>Model constantly improved with new data</p>
         </div>
       </div>
     </div>
@@ -947,14 +947,14 @@
   <section class="chart-section" id="chart">
     <div class="container">
       <div class="section-header">
-        <h2 class="animate">Análise de Parâmetros</h2>
-        <p class="animate delay-1">Visualize a relação entre os principais indicadores de qualidade da água</p>
+        <h2 class="animate">Parameter Analysis</h2>
+        <p class="animate delay-1">Visualize relationships between key water quality indicators</p>
       </div>
       
       <div class="chart-container animate">
         <div class="chart-header">
-          <h3>Parâmetros de Qualidade da Água</h3>
-          <p>Comparação entre amostras potáveis e não potáveis</p>
+          <h3>Water Quality Parameters</h3>
+          <p>Comparison between potable and non-potable samples</p>
         </div>
         <div class="chart-wrapper">
           <canvas id="qualityChart"></canvas>
@@ -970,7 +970,7 @@
       <div class="footer-content">
         <div class="footer-column">
           <h3>AquaSafe</h3>
-          <p>Tecnologia avançada para garantir água segura e potável para todos.</p>
+          <p>Advanced technology to ensure safe drinking water for everyone.</p>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -980,51 +980,51 @@
         </div>
         
         <div class="footer-column">
-          <h3>Links Rápidos</h3>
+          <h3>Quick Links</h3>
           <ul>
-            <li><a href="#home"><i class="fas fa-chevron-right"></i> Início</a></li>
-            <li><a href="#predict"><i class="fas fa-chevron-right"></i> Previsão</a></li>
-            <li><a href="#features"><i class="fas fa-chevron-right"></i> Recursos</a></li>
-            <li><a href="#chart"><i class="fas fa-chevron-right"></i> Análises</a></li>
+            <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="#predict"><i class="fas fa-chevron-right"></i> Analysis</a></li>
+            <li><a href="#features"><i class="fas fa-chevron-right"></i> Technology</a></li>
+            <li><a href="#chart"><i class="fas fa-chevron-right"></i> Insights</a></li>
           </ul>
         </div>
         
         <div class="footer-column">
-          <h3>Contato</h3>
+          <h3>Contact</h3>
           <div class="footer-contact">
             <p><i class="fas fa-map-marker-alt"></i> Av. Mal. Mascarenhas de Morais, 3905 - Imbiribeira, Recife - PE</p>
-            <p><i class="fas fa-phone"></i> (81) 99999-9999</p>
-            <p><i class="fas fa-envelope"></i> contato@aquasafe.com.br</p>
+            <p><i class="fas fa-phone"></i> (81) 9999-9999</p>
+            <p><i class="fas fa-envelope"></i> contact@aquasafe.com</p>
           </div>
         </div>
         
         <div class="footer-column">
           <h3>Newsletter</h3>
-          <p>Inscreva-se para receber novidades e atualizações.</p>
+          <p>Subscribe to receive news and updates.</p>
           <div class="newsletter-form">
-            <input type="email" placeholder="Seu e-mail" required>
+            <input type="email" placeholder="Your email" required>
             <button type="submit"><i class="fas fa-paper-plane"></i></button>
           </div>
         </div>
       </div>
       
       <div class="copyright">
-        <p>&copy; 2025 AquaSafe - Todos os direitos reservados. Projeto Integrador IV - ADS</p>
+        <p>&copy; 2023 AquaSafe - All rights reserved. Integrated Project IV - ADS</p>
       </div>
     </div>
   </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Configurações do gráfico
+      // Chart settings
       const ctx = document.getElementById('qualityChart').getContext('2d');
       const qualityChart = new Chart(ctx, {
         type: 'radar',
         data: {
-          labels: ['pH', 'Dureza', 'Sólidos', 'Cloraminas', 'Sulfato', 'Condutividade', 'Carbono', 'Trihalometanos', 'Turbidez'],
+          labels: ['pH', 'Hardness', 'Solids', 'Chloramines', 'Sulfate', 'Conductivity', 'Organic Carbon', 'Trihalomethanes', 'Turbidity'],
           datasets: [
             {
-              label: 'Água Potável',
+              label: 'Potable Water',
               data: [7.2, 180, 12000, 5.8, 240, 380, 12, 55, 3.8],
               backgroundColor: 'rgba(0, 200, 83, 0.2)',
               borderColor: 'rgba(0, 200, 83, 1)',
@@ -1032,7 +1032,7 @@
               pointBackgroundColor: 'rgba(0, 200, 83, 1)',
             },
             {
-              label: 'Água Não Potável',
+              label: 'Non-Potable Water',
               data: [5.2, 85, 28000, 8.5, 580, 1200, 22, 110, 8.2],
               backgroundColor: 'rgba(255, 82, 82, 0.2)',
               borderColor: 'rgba(255, 82, 82, 1)',
@@ -1077,7 +1077,7 @@
         }
       });
 
-      // Formulário de previsão
+      // Prediction form
       const form = document.getElementById('water-form');
       const resultCard = document.getElementById('result-card');
       const confidenceLevel = document.getElementById('confidence-level');
@@ -1088,19 +1088,19 @@
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Simular processamento
+        // Show processing state
         resultCard.className = 'result-card neutral';
         resultCard.innerHTML = `
           <div class="result-icon">
             <i class="fas fa-spinner fa-spin"></i>
           </div>
-          <h3 class="result-title">Analisando...</h3>
-          <p class="result-description">Processando os parâmetros da água</p>
+          <h3 class="result-title">Analyzing...</h3>
+          <p class="result-description">Processing water parameters</p>
         `;
         
-        // Simular tempo de processamento
+        // Simulate processing time
         setTimeout(() => {
-          // Obter valores do formulário
+          // Get form values
           const ph = parseFloat(document.getElementById('ph').value);
           const hardness = parseFloat(document.getElementById('hardness').value);
           const solids = parseFloat(document.getElementById('solids').value);
@@ -1111,25 +1111,25 @@
           const trihalomethanes = parseFloat(document.getElementById('trihalomethanes').value);
           const turbidity = parseFloat(document.getElementById('turbidity').value);
           
-          // Determinar resultado com base nos parâmetros
+          // Determine result based on parameters
           let potability, confidence, message;
           
-          // Lógica mais avançada de simulação
+          // Advanced simulation logic
           let score = 0;
           
-          // pH (ideal entre 6.5 e 8.5)
+          // pH (ideal between 6.5 and 8.5)
           if (ph >= 6.5 && ph <= 8.5) score += 20;
           else if (ph >= 5.5 && ph <= 9.5) score += 10;
           
-          // Dureza (ideal entre 100-200 mg/L)
+          // Hardness (ideal between 100-200 mg/L)
           if (hardness >= 100 && hardness <= 200) score += 15;
           else if (hardness >= 50 && hardness <= 300) score += 8;
           
-          // Sólidos (ideal < 20,000 mg/L)
+          // Solids (ideal < 20,000 mg/L)
           if (solids <= 20000) score += 10;
           else if (solids <= 40000) score += 5;
           
-          // Outros parâmetros...
+          // Other parameters...
           if (chloramines <= 6.5) score += 8;
           if (sulfate <= 400) score += 8;
           if (conductivity <= 600) score += 8;
@@ -1137,22 +1137,22 @@
           if (trihalomethanes <= 80) score += 8;
           if (turbidity <= 5) score += 8;
           
-          // Determinar resultado
+          // Determine result
           if (score >= 75) {
             potability = "safe";
             confidence = 80 + Math.floor(Math.random() * 15);
-            message = "Água Potável";
+            message = "Potable Water";
           } else if (score >= 50) {
             potability = "neutral";
             confidence = 60 + Math.floor(Math.random() * 15);
-            message = "Potabilidade Incerta";
+            message = "Uncertain Potability";
           } else {
             potability = "unsafe";
             confidence = 85 + Math.floor(Math.random() * 10);
-            message = "Água Não Potável";
+            message = "Non-Potable Water";
           }
           
-          // Atualizar a interface
+          // Update UI
           resultCard.className = `result-card ${potability}`;
           
           if (potability === "safe") {
@@ -1161,11 +1161,11 @@
                 <i class="fas fa-check-circle"></i>
               </div>
               <h3 class="result-title">${message}</h3>
-              <p class="result-description">Esta água é segura para consumo humano de acordo com os parâmetros fornecidos</p>
+              <p class="result-description">This water is safe for human consumption according to the provided parameters</p>
               <div class="confidence-meter">
                 <div class="confidence-level" id="confidence-level" style="width: ${confidence}%"></div>
               </div>
-              <p>Confiança: <span id="confidence-value">${confidence}%</span></p>
+              <p>Confidence: <span id="confidence-value">${confidence}%</span></p>
             `;
           } else if (potability === "unsafe") {
             resultCard.innerHTML = `
@@ -1173,11 +1173,11 @@
                 <i class="fas fa-exclamation-triangle"></i>
               </div>
               <h3 class="result-title">${message}</h3>
-              <p class="result-description">Esta água não atende aos padrões de potabilidade. Não recomendado para consumo.</p>
+              <p class="result-description">This water does not meet potability standards. Not recommended for consumption.</p>
               <div class="confidence-meter">
                 <div class="confidence-level" id="confidence-level" style="width: ${confidence}%"></div>
               </div>
-              <p>Confiança: <span id="confidence-value">${confidence}%</span></p>
+              <p>Confidence: <span id="confidence-value">${confidence}%</span></p>
             `;
           } else {
             resultCard.innerHTML = `
@@ -1185,21 +1185,21 @@
                 <i class="fas fa-question-circle"></i>
               </div>
               <h3 class="result-title">${message}</h3>
-              <p class="result-description">Recomendamos análise laboratorial adicional para confirmar a potabilidade</p>
+              <p class="result-description">We recommend additional laboratory analysis to confirm potability</p>
               <div class="confidence-meter">
                 <div class="confidence-level" id="confidence-level" style="width: ${confidence}%"></div>
               </div>
-              <p>Confiança: <span id="confidence-value">${confidence}%</span></p>
+              <p>Confidence: <span id="confidence-value">${confidence}%</span></p>
             `;
           }
           
-          // Mostrar gráfico de parâmetros
+          // Show parameter chart
           qualityChartContainer.style.display = 'block';
           
-          // Atualizar gráfico com os valores inseridos
+          // Update chart with input values
           const waterCtx = waterChartCanvas.getContext('2d');
           
-          // Destruir gráfico anterior se existir
+          // Destroy previous chart if exists
           if (window.waterChart) {
             window.waterChart.destroy();
           }
@@ -1207,9 +1207,9 @@
           window.waterChart = new Chart(waterCtx, {
             type: 'bar',
             data: {
-              labels: ['pH', 'Dureza', 'Sólidos', 'Cloraminas', 'Sulfato', 'Condutividade', 'Carbono', 'Trihalometanos', 'Turbidez'],
+              labels: ['pH', 'Hardness', 'Solids', 'Chloramines', 'Sulfate', 'Conductivity', 'Organic Carbon', 'Trihalomethanes', 'Turbidity'],
               datasets: [{
-                label: 'Valores Inseridos',
+                label: 'Input Values',
                 data: [ph, hardness, solids/1000, chloramines, sulfate, conductivity, organic_carbon, trihalomethanes, turbidity],
                 backgroundColor: 'rgba(26, 115, 232, 0.7)',
                 borderColor: 'rgba(26, 115, 232, 1)',
@@ -1223,7 +1223,7 @@
                   beginAtZero: true,
                   title: {
                     display: true,
-                    text: 'Valores'
+                    text: 'Values'
                   }
                 }
               },
@@ -1233,7 +1233,7 @@
                 },
                 title: {
                   display: true,
-                  text: 'Parâmetros Inseridos',
+                  text: 'Input Parameters',
                   font: {
                     size: 16,
                     family: "'Poppins', sans-serif"
@@ -1246,7 +1246,7 @@
         }, 1500);
       });
       
-      // Navegação suave
+      // Smooth navigation
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -1257,7 +1257,7 @@
         });
       });
       
-      // Animação ao rolar
+      // Scroll animations
       const animateOnScroll = () => {
         const elements = document.querySelectorAll('.animate');
         elements.forEach(el => {
@@ -1271,18 +1271,18 @@
         });
       };
       
-      // Inicializar elementos animados
+      // Initialize animated elements
       document.querySelectorAll('.animate').forEach(el => {
         el.style.opacity = 0;
         el.style.visibility = 'hidden';
         el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
       });
       
-      // Verificar animação ao carregar e ao rolar
+      // Check animation on load and scroll
       window.addEventListener('load', animateOnScroll);
       window.addEventListener('scroll', animateOnScroll);
       
-      // Inicializar animações
+      // Initialize animations
       animateOnScroll();
     });
   </script>
